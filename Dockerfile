@@ -15,7 +15,7 @@ RUN apt-get update \
     && make -j 4 \
     && make install
 
-#COPY nginx.conf /usr/local/nginx/conf/nginx.conf
+COPY nginx.conf /usr/local/nginx/conf/nginx.conf
 
 RUN cd /usr/local/nginx/conf && mkdir hls
 
